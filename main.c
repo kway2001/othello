@@ -9,7 +9,7 @@ extern int gameboard[N][N];
 
 int main(int argc, char *argv[]) {
 	
-	int gameboard[N][N] = {
+	int gameboard[N][N] = {		//배열에 문자 '공백' 넣음  
 	{32, 32, 32, 32, 32, 32},
 	{32, 32, 32, 32, 32, 32},
 	{32, 32, 32, 32, 32, 32},
@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
 	{32, 32, 32, 32, 32, 32},
 	};
 	
-	init_othello();
+	init_othello();		//보드판 초기화  
 	
 	return 0;
 }
