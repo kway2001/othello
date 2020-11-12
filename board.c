@@ -3,13 +3,13 @@
 #define N 6
 int gameboard[N][N];
 
+
 void horizontal_line() {		//가로선 출력  
 	printf(" -------------\n");
 }
 
 void board_othello() {		//보드판 구현  
 	int i, j;
-	
 	printf(" 0 1 2 3 4 5\n");
 	horizontal_line();
 	for (i=0; i<=5; i++) {
