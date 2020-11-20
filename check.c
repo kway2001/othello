@@ -7,3 +7,8 @@ int gameboard[N][N];
 
 
 //뒤집을 수 있는 돌이 있는지 확인 
+
+void isGameEnd() {
+	
+	
+}
