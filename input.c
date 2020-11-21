@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #define N 6
-int gameboard[N][N];
-int low, col;
+extern int gameboard[N][N];
+extern int low, col;
 
 
 //흰색 돌을 놓을 위치 입력 받기

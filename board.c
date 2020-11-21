@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #define N 6
-int gameboard[N][N];
-
+extern int gameboard[N][N];
+extern int number_white();
+extern int number_black();
 
 void horizontal_line() {		//가로선 출력  
 	printf(" -------------\n");
@@ -20,6 +22,7 @@ void board_othello() {		//보드판 구현
 		printf("\n");
 		horizontal_line();
 	}
+	printf("STATUS - WHITE : %i BLACK : %i\n", number_white, number_black); 	//현재 돌 개수 출력 
 }
 
 void init_othello() {		//보드판 초기화  
