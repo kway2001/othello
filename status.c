@@ -8,8 +8,8 @@ extern int gameboard[N][N];
 int number_white() {
 	int i, j;
 	int sum = 0;
-	for (i=0; i<=6; i++) {
-		for (j=0; j<=6; j++) {
+	for (i=0; i<=5; i++) {
+		for (j=0; j<=5; j++) {
 			if (gameboard[i][j] == 79)
 				sum++;
 		}
@@ -21,8 +21,8 @@ int number_white() {
 int number_black() {
 	int i, j;
 	int sum = 0;
-	for (i=0; i<=6; i++) {
-		for (j=0; j<=6; j++) {
+	for (i=0; i<=5; i++) {
+		for (j=0; j<=5; j++) {
 			if (gameboard[i][j] == 88)
 				sum++;
 		}

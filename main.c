@@ -19,6 +19,7 @@ int main(int argc, char *argv[]) {
 	
 	init_othello();		//보드판 초기화 
 	while (isGameEnd() == false) {		//종료조건이 아니면(거짓이면) 게임 시작 종료조건: 빈칸없음, 둘다 놓을곳 없음  
+		board_othello();
 		if (available_input() == true /* && 뒤집을 검은돌이 있으면*/) {		//흰 돌 둘 곳이 있는지 확인 
 		
 			put_white();		//흰 돌 좌표 입력 받음 
@@ -31,6 +32,7 @@ int main(int argc, char *argv[]) {
 			}
 			gameboard[low][col] = 79; 	//배열에 'O' 넣기 
 			//돌 뒤집기 
+			
 			//뒤집은 개수 상태 출력
 			 
 		}
@@ -39,7 +41,7 @@ int main(int argc, char *argv[]) {
 		if (available_input() == true /* && 뒤집을 흰 돌이 있으면*/) {		//검은 돌 둘 곳이 있는지 확인 
 			board_othello();
 			put_black();	//검은 돌 좌표 입력 받음
-			while(gameboard[low][col] == 32 /* || 뒤집을수 없음*/) {
+			while(gameboard[low][col] != 32 /* || 뒤집을수 없음*/) {
 				if (gameboard[low][col] != 32)
 					printf("invalid input! (already occupied)\n");
 				else

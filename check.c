@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #define N 6
 extern int gameboard[N][N];
+extern int low, col;
 
 //돌을 둘 곳이 있는지 확인 
 int available_input() {		// 빈 칸이 있는지 확인, 빈 칸이 있으면 참 출력 
