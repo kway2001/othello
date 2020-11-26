@@ -34,30 +34,34 @@ int main(int argc, char *argv[]) {
 			//돌 뒤집기 
 			
 			//뒤집은 개수 상태 출력
+			board_othello();
 			 
 		}
 		printf("white has nowhere to put\n");		//흰돌을 둘 곳이 없다고 출력 
 		
 		if (available_input() == true /* && 뒤집을 흰 돌이 있으면*/) {		//검은 돌 둘 곳이 있는지 확인 
-			board_othello();
+	//		board_othello();
 			put_black();	//검은 돌 좌표 입력 받음
 			while(gameboard[low][col] != 32 /* || 뒤집을수 없음*/) {
 				if (gameboard[low][col] != 32)
 					printf("invalid input! (already occupied)\n");
 				else
 					printf("invalid input! (unable to flip)\n");
-				put_black;
+				put_black();
 			} 
 			gameboard[low][col] = 88; 	//배열에 'X' 넣기
 			//돌 뒤집기
-			//돌 개수, 뒤집은 개수 상태 출력
+			//뒤집은 개수 상태 출력
+			board_othello();
  		}
  		printf("black has nowhere to put\n");		//검은돌을 둘 곳이 없다고 출력 
 	}
 	
-	printf("winer is : ");
 	//종료조건 만족 후 게임 종료, 승자 표시 
-	
+	if (number_white() > number_black())
+		printf("WHITE WIN!");
+	else
+		printf("BLACK WIN!");
 	
 	
 	/*
